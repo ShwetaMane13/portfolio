@@ -2,6 +2,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/Home";
 import { EducationWorkExperience } from "./components/about/EducationWorkExperience";
+import { ICanHelpYouWith } from "./components/about/ICanHelpYouWith";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Home />
       </div>
       <EducationWorkExperience />
+      <ICanHelpYouWith />
     </div>
   );
 }

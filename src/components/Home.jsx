@@ -19,7 +19,7 @@ export const Home = () => {
         <section className="flex flex-col gap-8">
           {" "}
           <section className="text-3xl font-inter border-blue-400 w-2/3">
-            A Fullstack Developer based in Mumbai, India
+            A Fullstack Developer based in Mumbai, India.
           </section>
           <section className="text-base font-inter text-[#808080]">
             Passionate creating great experiences for digital product
