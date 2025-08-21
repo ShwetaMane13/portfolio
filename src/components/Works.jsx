@@ -6,7 +6,7 @@ export const Works = () => {
   const projects = [
     {
       title: "Donezo",
-      description: "To-do app powered by Pomodoro focus.",
+      description: "To-do app powered by Pomodoro.",
       img: projectOne,
     },
     {
