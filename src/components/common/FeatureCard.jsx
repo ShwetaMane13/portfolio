@@ -19,7 +19,7 @@ const FeatureCard = ({ gradient, children, id }) => {
 export const Todo = ({id}) => {
   return (
     <FeatureCard id={id} gradient="from-[#cdb4db] to-[#7b61ff]">
-      <div className="text-xl md:text-5xl text-white text-center">Pixel-Perfect Websites</div>
+      <div className="text-xl md:text-5xl text-white text-center w-1/2">Pixel-Perfect Websites</div>
     </FeatureCard>
   );
 };
@@ -27,7 +27,7 @@ export const Todo = ({id}) => {
 export const TodoOne = ({id}) => {
   return (
     <FeatureCard id={id} gradient="from-[#d6b4fc] to-[#e673b7]">
-      <div className="text-xl md:text-5xl text-white text-center">Scalable Web Applications</div>
+      <div className="text-xl md:text-5xl text-white text-center w-1/2">Scalable Web Applications</div>
     </FeatureCard>
   );
 };

@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 export const EducationWorkExperience = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.8 });
+  const isInView = useInView(ref, { amount: 0.8, once: true });
   return (
     <div
       ref={ref}
