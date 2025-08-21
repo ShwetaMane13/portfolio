@@ -65,8 +65,8 @@ export const Works = () => {
                 src={project.img}
                 alt=""
               />
-              <p className="text-2xl text-inter p-2">{project.title}</p>
-              <p className="text-base text-inter pl-2">{project.description}</p>
+              <p className="text-xl text-inter pt-2 pl-2">{project.title}</p>
+              <p className="text-base text-inter pb-2 pl-2">{project.description}</p>
               <div className="text-inter flex justify-between px-2">
                 <section className="text-sm">source</section>
                 <section className="text-sm">live</section>
