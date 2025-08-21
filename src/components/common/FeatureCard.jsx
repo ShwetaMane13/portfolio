@@ -6,7 +6,7 @@ const FeatureCard = ({ gradient, children, id }) => {
   return (
     <div
       className={classNames(
-        "absolute inset-0 bg-gradient-to-br z-10 h-full lg:w-full rounded-2xl transition-opacity ",
+        "absolute inset-0 bg-gradient-to-br flex justify-center items-center z-10 h-full lg:w-full rounded-2xl transition-opacity",
         gradient,
         inViewFeature === id ? "opacity-100" : "opacity-0"
       )}
@@ -18,24 +18,24 @@ const FeatureCard = ({ gradient, children, id }) => {
 
 export const Todo = ({id}) => {
   return (
-    <FeatureCard id={id} gradient="from-[#f7f0ff] to-[#a78afe]">
-      <span />
+    <FeatureCard id={id} gradient="from-[#cdb4db] to-[#7b61ff]">
+      <div className="text-xl md:text-5xl text-white text-center">Pixel-Perfect Websites</div>
     </FeatureCard>
   );
 };
 
 export const TodoOne = ({id}) => {
   return (
-    <FeatureCard id={id} gradient="from-[#f5fbff] to-[#addeff]">
-      <span />
+    <FeatureCard id={id} gradient="from-[#d6b4fc] to-[#e673b7]">
+      <div className="text-xl md:text-5xl text-white text-center">Scalable Web Applications</div>
     </FeatureCard>
   );
 };
 
 export const TodoTwo = ({id}) => {
   return (
-    <FeatureCard id={id} gradient="from-[#f5fff7] to-[#adf8ff]">
-      <span />
+    <FeatureCard id={id} gradient="from-[#fbc687] to-[#f78da7]">
+      <div className="text-xl md:text-5xl text-white text-center w-1/2">End-to-End Development</div>
     </FeatureCard>
   );
 };
