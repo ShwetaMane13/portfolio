@@ -43,7 +43,7 @@ function App() {
         <Works />
       </section>
       <section ref={contactRef}>
-        <Contact />
+        <Contact sections={sections}/>
       </section>
 
       <ScrollToTop />
