@@ -5,17 +5,17 @@ import { motion, useScroll, useTransform } from "motion/react";
 export const Works = () => {
   const projects = [
     {
-      title: "Struktura",
+      title: "Donezo",
       description: "A project made by yours truly",
       img: projectOne,
     },
     {
-      title: "Struktura",
+      title: "Portfolio",
       description: "A project made by yours truly",
       img: projectOne,
     },
     {
-      title: "Struktura",
+      title: "Kanban Board",
       description: "A project made by yours truly",
       img: projectOne,
     },
