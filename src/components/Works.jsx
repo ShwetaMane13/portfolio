@@ -6,17 +6,17 @@ export const Works = () => {
   const projects = [
     {
       title: "Donezo",
-      description: "A project made by yours truly",
+      description: "To-do app powered by Pomodoro focus.",
       img: projectOne,
     },
     {
       title: "Portfolio",
-      description: "A project made by yours truly",
+      description: "Showcasing my skills and work.",
       img: projectOne,
     },
     {
       title: "Kanban Board",
-      description: "A project made by yours truly",
+      description: "Drag-and-drop task management.",
       img: projectOne,
     },
   ];
@@ -44,11 +44,11 @@ export const Works = () => {
                   src={project.img}
                   alt=""
                 />
-                <p className="text-3xl p-4">{project.title}</p>
-                <p className="text-2xl pl-4">{project.description}</p>
-                <div className="flex justify-between p-4 mt-4">
+                <p className="text-3xl text-inter p-4">{project.title}</p>
+                <p className="text-2xl text-inter pl-4">{project.description}</p>
+                <div className="text-inter flex justify-between p-4 mt-4">
                   <section>source</section>
-                  <section>link</section>
+                  <section>live</section>
                 </div>
               </div>
             ))}
@@ -65,11 +65,11 @@ export const Works = () => {
                 src={project.img}
                 alt=""
               />
-              <p className="text-2xl p-2">{project.title}</p>
-              <p className="text-base pl-2">{project.description}</p>
-              <div className="flex justify-between px-2">
+              <p className="text-2xl text-inter p-2">{project.title}</p>
+              <p className="text-base text-inter pl-2">{project.description}</p>
+              <div className="text-inter flex justify-between px-2">
                 <section className="text-sm">source</section>
-                <section className="text-sm">link</section>
+                <section className="text-sm">live</section>
               </div>
             </div>
           ))}
