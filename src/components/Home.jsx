@@ -31,7 +31,7 @@ export const Home = ({ sections }) => {
               A Fullstack Developer based in Mumbai, India.
             </section>
             <section className="text-base font-inter flex text-center lg:text-left text-[#808080]">
-              Passionate creating great experiences for digital product
+              I design and build digital products that feel effortless to use.
             </section>
           </section>
           <section className="flex gap-8 mt-10">
