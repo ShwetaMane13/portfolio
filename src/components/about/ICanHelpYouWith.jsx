@@ -10,38 +10,55 @@ import { FeatureTitle } from "../common/FeatureTitle";
 
 export const ICanHelpYouWith = () => {
   const features = [
-    { title: "Use your calendar as a todo list", id: "todo-list", card: Todo },
     {
-      title: "Use your calendar as a todo list one",
+      title:
+        "Use your calendar as a todo list one Use your calendar as a todo list one",
+      id: "todo-list",
+      card: Todo,
+    },
+    {
+      title:
+        "Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one",
       id: "todo-list-one",
       card: TodoOne,
     },
     {
-      title: "Use your calendar as a todo list two",
+      title: "Use your calendar as a todo list one Use your calendar as a todo list one",
       id: "todo-list-two",
       card: TodoTwo,
     },
-    {
-      title: "Use your calendar as a todo list three",
-      id: "todo-list-three",
-      card: TodoThree,
-    },
-    {
-      title: "Use your calendar as a todo list-four",
-      id: "todo-list-four",
-      card: TodoFour,
-    },
-    {
-      title: "Use your calendar as a todo list-five",
-      id: "todo-list-five",
-      card: TodoFive,
-    },
+    // {
+    //   title: "Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one",
+    //   id: "todo-list-three",
+    //   card: TodoThree,
+    // },
+    // {
+    //   title: "Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one",
+    //   id: "todo-list-four",
+    //   card: TodoFour,
+    // },
+    // {
+    //   title: "Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one",
+    //   id: "todo-list-five",
+    //   card: TodoFive,
+    // },
   ];
 
   return (
-    <>
-      <div className="px-50 flex w-full border-blue-300 bg-blue-0 items-start">
-        <div className="w-full py-[40vh]">
+    <div className="flex flex-col">
+      <section className="text-4xl md:text-5xl text-center font-inter px-6 md:px-12 py-12">
+        I Can Help You With
+      </section>
+      <div className="px-6 md:px-12 lg:px-50 flex flex-col md:flex-row w-full items-start">
+        <div className="w-full md:w-1/2 sticky top-20 md:top-10 flex md:h-screen items-center order-1 md:order-2">
+          <div className="w-full relative aspect-square rounded-2xl">
+            {features.map((feature) => (
+              <feature.card id={feature.id} key={feature.id} />
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/2 py-12 md:py-[40vh] order-2 md:order-1">
           <ul>
             {features.map((feature) => (
               <li key={feature.id}>
@@ -50,16 +67,9 @@ export const ICanHelpYouWith = () => {
             ))}
           </ul>
         </div>
-        <div className="w-full sticky top-10 flex h-screen items-center">
-          <div className="w-full relative aspect-square rounded-2xl bg-gray-300">
-           {features.map(feature => (
-            <feature.card id={feature.id} key={feature.id} />
-           ))}
-          </div>
-        </div>
       </div>
 
-      <div className="h-screen">more room to scroll</div>
-    </>
+      {/* <div className="h-screen">more room to scroll</div> */}
+    </div>
   );
 };

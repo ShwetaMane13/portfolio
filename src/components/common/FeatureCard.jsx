@@ -6,7 +6,7 @@ const FeatureCard = ({ gradient, children, id }) => {
   return (
     <div
       className={classNames(
-        "absolute inset-0 bg-gradient-to-br h-full w-full rounded-2xl transition-opacity",
+        "absolute inset-0 bg-gradient-to-br z-10 h-full lg:w-full rounded-2xl transition-opacity ",
         gradient,
         inViewFeature === id ? "opacity-100" : "opacity-0"
       )}
