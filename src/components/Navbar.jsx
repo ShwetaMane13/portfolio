@@ -16,11 +16,25 @@ export const Navbar = ({ sections }) => {
 
   return (
     <div className="flex justify-between h-20 lg:h-1/10 px-10 lg:px-30 w-full fixed top-0 left-0 bg-white z-10">
-      <section className="flex flex-1 items-center">
-        <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-black font-bold text-lg text-white bg-black">
-          S
-        </div>
-      </section>
+     <section className="flex flex-1 items-center">
+  <motion.div
+    className="w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg text-white"
+    animate={{
+      background: [
+        "linear-gradient(135deg, #d6b4fc, #e673b7)",
+        "linear-gradient(135deg, #fbc687, #f78da7)",
+        "linear-gradient(135deg, #cdb4db, #7b61ff)",
+      ],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      repeatType: "mirror",
+    }}
+  >
+    S
+  </motion.div>
+</section>
       <section className="flex flex-1 items-center justify-end">
         <section className="hidden md:flex items-center gap-10">
           {navbarList.map((item) => (
