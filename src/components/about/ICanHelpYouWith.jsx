@@ -101,7 +101,7 @@ export const ICanHelpYouWith = () => {
       title:
         "Full-stack support — from initial concept to deployment. I handle both design integration and backend systems so you get a complete product.",
       card: TodoTwo,
-      id: "todo-list-two"
+      id: "todo-list-two",
     },
     // {
     //   title: "Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one Use your calendar as a todo list one",
@@ -143,7 +143,10 @@ export const ICanHelpYouWith = () => {
       </div>
 
       {/* Mobile experience with scroll snapping */}
-      <div className="lg:hidden h-screen snap-y snap-mandatory overflow-y-scroll">
+      <section className="text-4xl md:text-5xl text-center font-inter px-6 md:px-12 pt-12">
+        I Can Help You With{" "}
+      </section>
+      <div className="lg:hidden h-screen overflow-y-scroll snap-y snap-mandatory overflow-y-scroll">
         {features.map((feature) => (
           <section
             key={feature.id}
