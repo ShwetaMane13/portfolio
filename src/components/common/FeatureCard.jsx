@@ -1,14 +1,14 @@
 import classNames from "classnames";
 import { useFeatureStore } from "../../store";
 
-const FeatureCard = ({ gradient, children, id }) => {
+const FeatureCard = ({ gradient, children, id, forceVisible = false }) => {
   const inViewFeature = useFeatureStore((state) => state.inViewFeature);
   return (
     <div
       className={classNames(
         "absolute inset-0 bg-gradient-to-br flex justify-center items-center z-10 h-full lg:w-full rounded-2xl transition-opacity",
         gradient,
-        inViewFeature === id ? "opacity-100" : "opacity-0"
+        forceVisible || inViewFeature === id ? "opacity-100" : "opacity-0"
       )}
     >
       {children}
@@ -16,25 +16,25 @@ const FeatureCard = ({ gradient, children, id }) => {
   );
 };
 
-export const Todo = ({id}) => {
+export const Todo = ({id, forceVisible }) => {
   return (
-    <FeatureCard id={id} gradient="from-[#cdb4db] to-[#7b61ff]">
+    <FeatureCard id={id} forceVisible={forceVisible}  gradient="from-[#cdb4db] to-[#7b61ff]">
       <div className="text-xl md:text-5xl text-white text-center w-1/2">Pixel-Perfect Websites</div>
     </FeatureCard>
   );
 };
 
-export const TodoOne = ({id}) => {
+export const TodoOne = ({id, forceVisible}) => {
   return (
-    <FeatureCard id={id} gradient="from-[#d6b4fc] to-[#e673b7]">
+    <FeatureCard id={id} forceVisible={forceVisible} gradient="from-[#d6b4fc] to-[#e673b7]">
       <div className="text-xl md:text-5xl text-white text-center w-1/2">Scalable Web Applications</div>
     </FeatureCard>
   );
 };
 
-export const TodoTwo = ({id}) => {
+export const TodoTwo = ({id, forceVisible}) => {
   return (
-    <FeatureCard id={id} gradient="from-[#fbc687] to-[#f78da7]">
+    <FeatureCard id={id} forceVisible={forceVisible} gradient="from-[#fbc687] to-[#f78da7]">
       <div className="text-xl md:text-5xl text-white text-center w-1/2">End-to-End Development</div>
     </FeatureCard>
   );
