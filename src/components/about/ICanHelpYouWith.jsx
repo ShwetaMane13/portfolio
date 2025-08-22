@@ -147,17 +147,22 @@ export const ICanHelpYouWith = () => {
         I Can Help You With{" "}
       </section>
       <div className="lg:hidden h-screen snap-y snap-mandatory overflow-y-scroll">
-        {features.map((feature) => (
+        {features.map((feature, i) => (
           <section
             key={feature.id}
-            className="h-screen w-full flex flex-col items-center justify-center snap-start"
+            className="h-screen w-full flex flex-col items-center justify-center snap-start relative"
           >
             <div className="relative w-4/5 aspect-square rounded-2xl overflow-hidden">
               <feature.card id={feature.id} forceVisible />
             </div>
-            <h2 className="text-2xl font-inter text-gray-500 mb-6 text-justify pt-10 px-10">
+            <h2 className="text-2xl font-inter text-gray-500 text-justify pt-10 px-10">
               {feature.title}
             </h2>
+            {
+              i === 0 && <div className="animate-bounce text-sm text-gray-600">
+              ↑ Swipe up
+            </div>
+            }
           </section>
         ))}
       </div>
