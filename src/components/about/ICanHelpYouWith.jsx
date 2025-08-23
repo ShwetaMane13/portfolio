@@ -133,8 +133,8 @@ export const ICanHelpYouWith = () => {
       </div>
 
       {/* Mobile experience with scroll snapping */}
-      <section className="lg:hidden relative">
-        <h2 className="absolute top-6  -translate-y-10 text-4xl md:text-5xl text-center font-inter px-6 md:px-12">I Can Help You With{" "}</h2>
+      <section className="lg:hidden text-4xl md:text-5xl text-center font-inter px-6 md:px-12 pt-12">
+        I Can Help You With{" "}
       </section>
       <div className="lg:hidden h-screen snap-y snap-mandatory overflow-y-scroll">
         {features.map((feature, i) => (
