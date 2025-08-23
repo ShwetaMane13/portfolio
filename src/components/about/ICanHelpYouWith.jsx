@@ -73,7 +73,6 @@
 //   );
 // };
 
-import { useEffect, useRef, useState } from "react";
 import {
   Todo,
   TodoFive,
@@ -120,52 +119,16 @@ export const ICanHelpYouWith = () => {
     //   card: TodoFive,
     // },
   ];
-
-  // new code
-  const snapRef = useRef(null);
-  const [active, setActive] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  //new code
-useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setActive(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-    if (snapRef.current) observer.observe(snapRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  //new code
-  // lock/unlock body scroll depending on section
-  useEffect(() => {
-    if (active && currentIndex < features.length - 1) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [active, currentIndex, features.length]);
-
-  //new code
-  // track which card is in view
-  const handleScroll = (e) => {
-    const scrollTop = e.target.scrollTop;
-    const height = window.innerHeight;
-    const index = Math.round(scrollTop / height);
-    setCurrentIndex(index);
-  };
+  
 
   return (
     <>
       {/* Desktop experience (unchanged) */}
-      <section
-        ref={snapRef}
-        onScroll={handleScroll} // new code
-        className="hidden md:block text-4xl md:text-5xl text-center font-inter px-6 md:px-12 py-12"
-      >
-        I Can Help You With
-      </section>
+      <section className="hidden md:block text-4xl md:text-5xl text-center font-inter px-6 md:px-12 py-12">
+          I Can Help You With
+     </section>
       <div className="hidden lg:flex px-50 gap-6 w-full items-start">
+          
         <div className="w-full py-[40vh]">
           <ul>
             {features.map((feature) => (
@@ -200,13 +163,11 @@ useEffect(() => {
             <h2 className="text-2xl font-inter text-gray-500 text-justify pt-10 px-10">
               {feature.title}
             </h2>
-            {/* new code */}
-            {/* Show hint only on last card */}
-            {i === features.length - 1 && (
-              <div className="absolute bottom-6 text-gray-400 text-sm">
-                Continue ↓
-              </div>
-            )}
+            {
+              i === 0 && <div className="animate-bounce text-sm text-gray-600">
+              ↑ Swipe up
+            </div>
+            }
           </section>
         ))}
       </div>
