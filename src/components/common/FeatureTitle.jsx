@@ -23,7 +23,7 @@ export const FeatureTitle = ({ children, id }) => {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ ease: easeInOut }}
-      className="text-2xl md:text-4xl pt-10 md:py-40 font-inter text-gray-500 transition-colors"
+      className="text-2xl md:text-4xl md:py-40 font-inter text-gray-500 transition-colors"
     >
       {children}
     </motion.p>
