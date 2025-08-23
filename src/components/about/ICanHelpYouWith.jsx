@@ -140,7 +140,7 @@ export const ICanHelpYouWith = () => {
         {features.map((feature, i) => (
           <section
             key={feature.id}
-            className="h-screen w-full flex flex-col items-center justify-center snap-start relative"
+            className="h-full w-full flex flex-col items-center justify-center snap-start relative"
           >
             <div className="relative w-4/5 aspect-square rounded-2xl overflow-hidden">
               <feature.card id={feature.id} forceVisible />
