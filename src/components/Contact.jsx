@@ -58,7 +58,7 @@ export const Contact = ({ sections }) => {
           </a>
         </section>
         <section className="mt-6 text-sm text-gray-400">
-          © 2025 Shweta Mane
+          © 2026 Shweta Mane
         </section>
       </div>
     </div>

@@ -1,23 +1,26 @@
 import { useRef } from "react";
-import projectOne from "../assets/work.jpg";
+import projectOne from "../assets/blue-thrust.png";
+import projectTwo from "../assets/work.jpg"
 import { motion, useScroll, useTransform } from "motion/react";
 
 export const Works = () => {
   const projects = [
     {
-      title: "Donezo",
-      description: "To-do app powered by Pomodoro.",
+      title: "Blue Thrust",
+      description: "The marketplace for maritime solutions.",
       img: projectOne,
+      source: 'https://github.com/ShwetaMane13/blue-thrust',
+      live: 'https://www.blue-thrust.com/'
     },
+    // {
+    //   title: "Portfolio",
+    //   description: "Showcasing my skills and work.",
+    //   img: projectOne,
+    // },
     {
-      title: "Portfolio",
-      description: "Showcasing my skills and work.",
-      img: projectOne,
-    },
-    {
-      title: "Kanban Board",
+      title: "Kanban Board(IN PROGRESS)",
       description: "Drag-and-drop task management.",
-      img: projectOne,
+      img: projectTwo,
     },
   ];
 
@@ -47,8 +50,8 @@ export const Works = () => {
                 <p className="text-3xl text-inter p-4">{project.title}</p>
                 <p className="text-2xl text-inter pl-4">{project.description}</p>
                 <div className="text-inter flex justify-between p-4 mt-4">
-                  <section>source</section>
-                  <section>live</section>
+                  <a href={project.source} target="_blank">source</a>
+                  <a href={project.live} target="_blank">live</a>
                 </div>
               </div>
             ))}
